@@ -3,39 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Meteo Prediction App</title>
   </head>
   <body>
     <div class="weather-app">
-    <header>
+      <header>
         <form class="search-form" id="search-form">
-            <input type="search" placeholder="Enter a City..." required id="search-form-input" class="search-form-input" />
-            <input type="submit" value="Search" class="search-form-button"/>
+          <input
+            type="search"
+            placeholder="Enter a City..."
+            required
+            id="search-form-input"
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
         </form>
-     </header>
-    <main>
+      </header>
+
+      <main>
         <div class="weather-app-data">
-        <div>
-    <h1 class="weather-app-city" id="city">Paris</h1>
-    <p class="weather-app-details">
-        Thursday 14:10, scattered clouds
-        <br/>
-        Humidity:<strong>81%</strong>, Wind: <strong>5.14km/h</strong> 
-    </p>
-    </div>
-    <div class="weather-app-temperature-container">
-    <div class="weather-app-icon">🌥️</div><div class="weather-app-temperature">19</div><div class="weather-app-unit">°C</div>
-    </div>
-    </div>
-    </main>
-    <footer>
-      Coded by<a href="https://github.com/rupikaupa2006"> Rupika Upadhyay </a>
-      💓
-    </footer>
+          <div>
+            <h1 class="weather-app-city" id="city">Paris</h1>
+            <p class="weather-app-details" id="description">
+              Thursday 14:10, scattered clouds
+            </p>
+            <p id="humidity">Humidity: <strong>81%</strong></p>
+            <p id="wind">Wind: <strong>5.14 km/h</strong></p>
+          </div>
+
+          <div class="weather-app-temperature-container">
+            <img id="weather-icon" src="" alt="weather icon" />
+            <div class="weather-app-temperature" id="temperature">19°C</div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        Coded by
+        <a href="https://github.com/rupikaupa2006">Rupika Upadhyay</a> 💓
+      </footer>
     </div>
     <script src="src/index.js"></script>
   </body>
