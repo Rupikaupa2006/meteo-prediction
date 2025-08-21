@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <title>Meteo Prediction App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Meteo App</title>
   </head>
   <body>
     <div class="weather-app">
@@ -18,7 +19,7 @@
         <form class="search-form" id="search-form">
           <input
             type="search"
-            placeholder="Enter a City..."
+            placeholder="Enter a city.."
             required
             id="search-form-input"
             class="search-form-input"
@@ -26,28 +27,83 @@
           <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
-
       <main>
         <div class="weather-app-data">
           <div>
-            <h1 class="weather-app-city" id="city">Paris</h1>
-            <p class="weather-app-details" id="description">
-              Thursday 14:10, scattered clouds
+            <h1 class="weather-app-city" id="city"></h1>
+            <p class="weather-app-details">
+              <span id="time"></span>,
+              <span id="description"></span>
+              <br />
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong id="wind-speed"></strong>
             </p>
-            <p id="humidity">Humidity: <strong>81%</strong></p>
-            <p id="wind">Wind: <strong>5.14 km/h</strong></p>
           </div>
-
           <div class="weather-app-temperature-container">
-            <img id="weather-icon" src="" alt="weather icon" />
-            <div class="weather-app-temperature" id="temperature">19°C</div>
+            <div id="icon"></div>
+            <div class="weather-app-temperature" id="temperature"></div>
+            <div class="weather-app-unit">°C</div>
+          </div>
+        </div>
+        <div class="weather-forecast">
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Tue</div>
+            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">
+                <strong>15º</strong>
+              </div>
+              <div class="weather-forecast-temperature">9º</div>
+            </div>
+          </div>
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Wed</div>
+            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">
+                <strong>15º</strong>
+              </div>
+              <div class="weather-forecast-temperature">9º</div>
+            </div>
+          </div>
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Wed</div>
+            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">
+                <strong>15º</strong>
+              </div>
+              <div class="weather-forecast-temperature">9º</div>
+            </div>
+          </div>
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Wed</div>
+            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">
+                <strong>15º</strong>
+              </div>
+              <div class="weather-forecast-temperature">9º</div>
+            </div>
+          </div>
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Wed</div>
+            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">
+                <strong>15º</strong>
+              </div>
+              <div class="weather-forecast-temperature">9º</div>
+            </div>
           </div>
         </div>
       </main>
 
       <footer>
-        Coded by
-        <a href="https://github.com/rupikaupa2006">Rupika Upadhyay</a> 💓
+        This project was coded with 💗 by
+        <a href="https://github.com/rupikaupa2006" target="_blank">
+          Rupika Upadhyay 💓</a
+        >,
       </footer>
     </div>
     <script src="src/index.js"></script>
